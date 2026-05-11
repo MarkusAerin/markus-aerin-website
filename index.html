@@ -17,7 +17,7 @@
       <a href="#collection">Collection</a>
       <a href="#atelier">Atelier</a>
       <a href="#bespoke">Bespoke</a>
-      <a href="#designer">Design Your Ring</a>
+      <a href="#designer">Memory to Metal</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -29,7 +29,7 @@
         <h1>Handcrafted pieces shaped between art, metal, and memory.</h1>
         <p class="intro">Markus Aerin creates sculptural gold and silver jewelry designed to feel personal, timeless, and quietly powerful.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#designer">Design your ring</a>
+          <a class="button primary" href="#designer">Begin with a memory</a>
           <a class="button secondary" href="#collection">Explore the pieces</a>
         </div>
       </div>
@@ -86,21 +86,51 @@
       <a class="button primary" href="#designer">Start designing</a>
     </section>
 
-    <section id="designer" class="designer-section">
+    <section id="designer" class="designer-section memory-section">
       <div class="section-heading">
-        <p class="eyebrow">Design your direction</p>
-        <h2>Build the beginning of your ring.</h2>
-        <p class="designer-intro">Choose a base, metal, surface, stone, setting, and engraving. This creates a concept request that the atelier can refine into a bespoke piece.</p>
+        <p class="eyebrow">Memory to Metal</p>
+        <h2>Begin with meaning. Shape it into a ring.</h2>
+        <p class="designer-intro">Choose the memory, the form, and the way it should live in metal. This is not a final CAD model. It is the first sketch of a bespoke piece for the atelier to refine.</p>
+      </div>
+
+      <div class="memory-steps">
+        <span>1. Memory</span>
+        <span>2. Form</span>
+        <span>3. Expression</span>
+        <span>4. Material</span>
+        <span>5. Request</span>
       </div>
 
       <div class="designer-grid">
         <div class="designer-panel">
-          <label>Ring shape
+          <label>What should the piece hold?
+            <select id="memorySelect">
+              <option>A name</option>
+              <option>Initials</option>
+              <option>A meaningful date</option>
+              <option>A word or phrase</option>
+              <option>A family symbol</option>
+              <option>A handwritten note</option>
+              <option>A birthstone</option>
+            </select>
+          </label>
+          <label>Your memory detail
+            <input id="memoryInput" type="text" placeholder="Example: Sarah, 03.07, courage, S + M" />
+          </label>
+          <label>Ring form
             <select id="shapeSelect">
               <option>Signet</option>
               <option>Rounded band</option>
               <option>Organic form</option>
               <option>Minimal wedding band</option>
+            </select>
+          </label>
+          <label>How should it appear?
+            <select id="expressionSelect">
+              <option>Engraved on the surface</option>
+              <option>Raised relief</option>
+              <option>Hand-carved texture</option>
+              <option>Hidden inside the band</option>
             </select>
           </label>
           <label>Metal
@@ -111,45 +141,37 @@
               <option>Gold Vermeil</option>
             </select>
           </label>
-          <label>Surface finish
-            <select id="finishSelect">
-              <option>Matte</option>
-              <option>High polish</option>
-              <option>Hammered</option>
-              <option>Hand-carved texture</option>
-            </select>
-          </label>
-          <label>Stone
+          <label>Stone direction
             <select id="stoneSelect">
               <option>No stone</option>
               <option>Lab diamond</option>
               <option>Sapphire</option>
               <option>Emerald</option>
+              <option>Birthstone</option>
               <option>Moissanite</option>
             </select>
           </label>
-          <label>Setting style
+          <label>Setting direction
             <select id="settingSelect">
               <option>Flush setting</option>
               <option>Bezel setting</option>
               <option>Raised center stone</option>
               <option>Scattered stones</option>
+              <option>No setting</option>
             </select>
-          </label>
-          <label>Engraving or carving idea
-            <input id="engravingInput" type="text" placeholder="Name, initials, symbol, or short note" />
           </label>
         </div>
 
-        <div class="preview-panel">
+        <div class="preview-panel memory-preview">
           <div class="preview-ring">
             <div class="preview-stone"></div>
+            <span id="memoryMark" class="memory-mark">MA</span>
           </div>
           <div class="preview-copy">
-            <p class="eyebrow">Your concept</p>
-            <h3 id="conceptTitle">Signet in 18K Yellow Gold</h3>
-            <p id="conceptDetails">Matte finish with no stone, using a flush setting direction.</p>
-            <p id="conceptEngraving">Engraving: To be added.</p>
+            <p class="eyebrow">Your first concept</p>
+            <h3 id="conceptTitle">A name shaped into a Signet</h3>
+            <p id="conceptDetails">The memory will be engraved on the surface of an 18K Yellow Gold ring, with no stone and a flush setting direction.</p>
+            <p id="conceptEngraving">Memory detail: To be added.</p>
             <a id="whatsappLink" class="button primary" target="_blank" rel="noopener" href="#">Send design request</a>
           </div>
         </div>
